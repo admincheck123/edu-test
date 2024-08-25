@@ -33,7 +33,7 @@ const courseContentData = {
                 <button class="toggle-button" onclick="toggleSection('vsCodeSetup')">Xem thêm</button>
             </div>
             <div class="section-content" id="vsCodeSetupContent">
-                <p><pre>Để cài đặt VS Code, bạn có thể tải xuống từ trang web chính thức và làm theo hướng dẫn cài đặt. Sau khi cài đặt, bạn có thể mở và chỉnh sửa các tệp HTML của mình dễ dàng.</pre></p>
+                <p>Để cài đặt VS Code, bạn có thể tải xuống từ trang web chính thức và làm theo hướng dẫn cài đặt. Sau khi cài đặt, bạn có thể mở và chỉnh sửa các tệp HTML của mình dễ dàng.</p>
                 <img src="./image/1_giới thiệu visual studio code.png" alt="VS Code Setup" class="section-image" >
                 <img src="./image/2_giới thiệu visual studio code.png" alt="VS Code Setup" class="section-image" >
             </div>

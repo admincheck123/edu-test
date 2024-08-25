@@ -151,7 +151,13 @@
         background-color: #ffeded;
         margin-left: 340px;
       }
-
+      .imgNav1{
+        width: 35px;
+        height: 35px;
+        object-fit: cover;
+        cursor: pointer;
+        display: none;
+      }
       /* Responsive Styles */
       @media (max-width: 768px) {
         .navbar-hamburger {
@@ -228,7 +234,11 @@
           cursor: pointer;
           animation: fadeIn linear 0.3s;
         }
+        .imgNav1{
+          display: block;
+        }
       }
+
       input[type="checkbox"]:checked ~ .sidebar {
         transform: translateX(0);
       }
@@ -403,7 +413,9 @@
         height: 50px;
         border-radius: 50%;
         object-fit: cover;
+        cursor: pointer;
       }
+      
       input[type="checkbox"] ~ .label1 {
         color: red;
         display: none;
@@ -452,7 +464,7 @@
       .navMobile {
         position: absolute;
         top: 10px;
-        left: 15px;
+        left: 8px;
         background-color: #333;
         width: 50px;
         height: 50px;
@@ -461,6 +473,7 @@
         opacity: 0;
         cursor: pointer;
       }
+
       .checkOk {
         color: #00ff0a !important;
         border: 1px solid #00ff0a;
@@ -481,20 +494,22 @@
       <!-- Các bông hoa tuyết sẽ được thêm vào đây -->
     </div>
     <div class="navbar">
-      <input type="checkbox" id="labelInput" />
-      <label for="labelInput">
-        <img
-          src="https://ss-images.saostar.vn/w400/2024/8/19/pc/1724046234177/gn5uu6gsh91-99mkfm7hn92-q1vez3wg1h3.png"
-          class="imgNav"
-          alt=""
-        />
-      </label>
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/9293/9293128.png"
+        class="imgNav1"
+        alt="navbar"
+      />
 
-      <label for="labelInput" class="label1">quang</label>
       <div class="navbar-logo">EDU BASIC</div>
-      <div onclick="showPersonalInfo()" class="userSideBar">
+      <img  onclick="showPersonalInfo()"
+        src="./image/okok.jpg"
+        class="imgNav "
+        alt="khanhvy"
+        style="margin-right: 30px;"
+      />
+      <!-- <div onclick="showPersonalInfo()" class="userSideBar">
         <i class="fas fa-user"></i> Personal Info
-      </div>
+      </div> -->
     </div>
     <div class="container">
       <label for="labelInputNav" class="navMobile"></label>
@@ -502,7 +517,7 @@
       <label for="labelInputNav" class="nav_overlay"></label>
       <aside class="sidebar" id="sidebar">
         <ul class="sidebar-menu">
-          <li class="menu-item locked">
+          <li class="menu-item locked disabled">
             <div onclick="toggleSubMenu(1)">
               <i class="fas fa-book"></i> Full Stack Developer
               <i class="fas fa-chevron-down"></i>
@@ -510,46 +525,74 @@
             <ul class="sub-menu" id="subMenu1">
               <li onclick="showCourseContent(1, 1)">
                 <i class="fas fa-file-alt"></i> Theory
+                <i class="fa-solid fa-check checkOk"></i>
+                
               </li>
               <li onclick="showCourseContent(1, 2)">
                 <i class="fa-brands fa-html5"></i> HTML
+                <i class="fa-solid fa-check checkOk"></i>
+
               </li>
               <li onclick="showCourseContent(1, 3)">
                 <i class="fa-brands fa-css3"></i> CSS
+                <i class="fa-solid fa-check checkOk"></i>
+
               </li>
               <li class="disabled" onclick="showCourseContent(1, 4)">
                 <i class="fa-brands fa-js"></i> Javascript
+                <i class="fa-solid fa-check checkFl"></i>
+
               </li>
               <li onclick="showCourseContent(1, 5)">
-                <i class="fa-solid fa-check"></i> Checkpoint - Static WebPages
+                <i class="fa-solid fa-check"></i> Checkpoint 
+                <i class="fa-solid fa-check checkOk"></i>
+
               </li>
               <li onclick="showCourseContent(1,6)">
                 <i class="fa-brands fa-cloudflare"></i> Homework
+                <i class="fa-solid fa-check checkOk"></i>
+
               </li>
               <li class="disabled" onclick="showCourseContent(1,7)">
                 <i class="fa-brands fa-npm"></i> NPM
+                <i class="fa-solid fa-check checkFl"></i>
+
               </li>
               <li onclick="showCourseContent(1, 8)">
-                <i class="fa-solid fa-check"></i> Checkpoint -Interactivity
+                <i class="fa-solid fa-check"></i> Checkpoint
+                <i class="fa-solid fa-check checkOk"></i>
+
               </li>
               <li onclick="showCourseContent(1,9)">
                 <i class="fa-brands fa-git-alt"></i> GIT
+                <i class="fa-solid fa-check checkOk"></i>
+
               </li>
               <li onclick="showCourseContent(1,10)">
                 <i class="fa-brands fa-github"></i> GITHUB
+                <i class="fa-solid fa-check checkOk"></i>
+
               </li>
               <li onclick="showCourseContent(1, 11)">
-                <i class="fa-solid fa-check"></i> Checkpoint - Collaborative
-                Work
+                <i class="fa-solid fa-check"></i> Checkpoint Work
+                <i class="fa-solid fa-check checkOk"></i>
+
+                
               </li>
               <li class="disabled" onclick="showCourseContent(1,12)">
                 <i class="fa-brands fa-react"></i> REACT
+                <i class="fa-solid fa-check checkFl"></i>
+
               </li>
               <li onclick="showCourseContent(1,13)">
                 <i class="fa-brands fa-node"></i>NODE JS
+                <i class="fa-solid fa-check checkOk"></i>
+
               </li>
               <li class="disabled" onclick="showCourseContent(1, 14)">
                 <i class="fa-solid fa-check"></i> Checkpoint - CLI APPS
+                <i class="fa-solid fa-check checkFl"></i>
+
               </li>
             </ul>
           </li>
@@ -599,7 +642,7 @@
               </li>
             </ul>
           </li>
-          <li class="menu-item course-4 locked">
+          <li class="menu-item course-4 locked disabled">
             <div onclick="toggleSubMenu(4)">
               <i class="fa-solid fa-lock"></i> HW FullStack
               <i class="fas fa-chevron-down"></i>

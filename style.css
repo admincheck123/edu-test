@@ -105,7 +105,11 @@ body {
 .sidebar-menu .menu-item > div:hover {
   background-color: #e0e0e0;
 }
-
+.section-image {
+  width: 1200px;
+  height: auto;
+  max-width: 100%;
+}
 .disabled {
   pointer-events: none;
   opacity: 0.5;
@@ -135,6 +139,8 @@ i.checkFl {
   padding: 5px 10px;
   cursor: pointer;
   transition: background-color 0.3s;
+  display: flex;
+  justify-content: space-between;
 }
 
 .sidebar-menu .sub-menu li:hover {
