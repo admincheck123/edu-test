@@ -274,6 +274,9 @@ const courseContentData = {
     1: "This is the content for Course 8, Lesson 1.",
     2: "This is the content for Course 8, Lesson 2.",
   },
+  10: {
+    10:"hello"
+  },
 };
 
 const lockedCourses = [10]; 
