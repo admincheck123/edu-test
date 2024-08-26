@@ -276,7 +276,7 @@ const courseContentData = {
   },
 };
 
-const lockedCourses = [1,2,3,4,5,6,7,8]; 
+const lockedCourses = [10]; 
 
 function showCourseContent(courseNumber, lessonNumber) {
   // Kiểm tra nếu khóa học bị khóa
@@ -312,9 +312,9 @@ function showUpdateSoonMessage() {
   updateSoonMessage.innerHTML = `
         <div class="update-soon-overlay"></div>
         <div class="update-soon-content">
-            <h2>Course Update Soon</h2>
-            <p>This course will be updated soon. Please check back later.</p>
-            <p>Expected on <b>08/20/2024</p> or maybe earlier</p>
+            <h2>This course you have owned</h2>
+            <p>You can study and do homework.</p>
+            <p><b>F8</b> team has been collaborating</p>
             <button onclick="closeUpdateSoonMessage()">Close</button>
         </div>
     `;
