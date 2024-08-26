@@ -127,7 +127,6 @@ i.checkFl {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 .sidebar-menu .sub-menu {
   display: none;
@@ -352,3 +351,4 @@ input[type="radio"] {
 .schedule-table td {
   color: #555555;
 }
+
